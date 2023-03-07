@@ -1,9 +1,10 @@
 import React from "react";
+import Api from "./api/Api";
 
 const App = () => {
   return (
-    <div className="App">
-    
+    <div>
+      <Api/>
     </div>
   );
 }
