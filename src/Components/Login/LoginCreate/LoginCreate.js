@@ -1,8 +1,15 @@
 import React from 'react'
 
 const LoginCreate = () => {
+  function handleSubmit(){}
+
   return (
-    <div>LoginCreate</div>
+    <section className='animeLeft'>
+      <h1 className='title'>Cadastre-se</h1>
+      <form onSubmit={handleSubmit}>
+        
+      </form>
+    </section>
   )
 }
 
