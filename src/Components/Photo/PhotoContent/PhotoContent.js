@@ -4,6 +4,7 @@ import { UserContext } from '../../../UserContext'
 import PhotoComments from '../PhotoComments/PhotoComments'
 import PhotoDelete from '../PhotoDelete/PhotoDelete'
 import style from './PhotoContent.module.css'
+import Image from '../../Helper/Image'
 
 const PhotoContent = ({data}) => {
 
@@ -14,7 +15,7 @@ const PhotoContent = ({data}) => {
   return (
     <div className={style.photo}>
       <div className={style.img}>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title}/>
       </div>
 
       <div className={style.details}>
