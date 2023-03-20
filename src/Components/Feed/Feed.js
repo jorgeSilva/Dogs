@@ -1,7 +1,14 @@
 import React from 'react'
+import FeedModal from './FeedModal/FeedModal'
+import FeedPhotos from './FeedPhotos/FeedPhotos'
 
-export const Feed = () => {
+const Feed = () => {
   return (
-    <div>Feed</div>
+    <div>
+      <FeedModal/>
+      <FeedPhotos/>
+    </div>
   )
 }
+
+export default Feed
