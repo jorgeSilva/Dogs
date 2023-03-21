@@ -31,7 +31,7 @@ const PhotoContent = ({data}) => {
           </p>
 
           <h1 className='title'>
-            <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
+            <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
           </h1>
 
           <ul className={style.attributes}>

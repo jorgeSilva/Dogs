@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import { UserStorage } from "./UserContext";
 import User from "./Components/User/User";
+import Photo from "./Components/Photo/Photo";
 import ProtectedRouter from "./Components/Helper/ProtectedRouter";
 
 const App = () => {
@@ -17,10 +18,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="login/*" element={<Login/>}/>
-            <Route path="conta/*" element={
-              <ProtectedRouter>
-                  <User/>
-              </ProtectedRouter>}/>
+            <ProtectedRouter path="conta/*" element={<User/>} />      
+            <Route path="foto/:id" element={<Photo/>} />
           </Routes>
         <Footer/>
       </UserStorage>
