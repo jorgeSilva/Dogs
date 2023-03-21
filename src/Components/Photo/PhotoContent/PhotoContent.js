@@ -6,14 +6,14 @@ import PhotoDelete from '../PhotoDelete/PhotoDelete'
 import style from './PhotoContent.module.css'
 import Image from '../../Helper/Image'
 
-const PhotoContent = ({data}) => {
+const PhotoContent = ({data, single}) => {
 
   const user = React.useContext(UserContext)
 
   const {photo, comments} = data
 
   return (
-    <div className={style.photo}>
+    <div className={`${style.photo} ${single ? style.single : ''}`}>
       <div className={style.img}>
         <Image src={photo.src} alt={photo.title}/>
       </div>

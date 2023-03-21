@@ -14,13 +14,13 @@ const PhotoComments = (props) => {
 
   return (
     <>
-      <ul ref={commentSection} className={style.comments}>
+      <ul ref={commentSection} className={`${style.comments} ${props.single ? style.single : ''}`}>
         {comments.map(item => <li key={item.comment_ID}>
           <b>{item.comment_author}: </b>
           <span>{item.comment_content}</span>
         </li>)}
       </ul>
-      {login && <PhotoCommentsForm id={props.id} setComments={setComments} />}
+      {login && <PhotoCommentsForm single={props.single} id={props.id} setComments={setComments} />}
     </>
   )
 }
