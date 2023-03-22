@@ -6,6 +6,7 @@ import useForm from '../../../Hooks/useForm'
 import Button from '../../Forms/Button/Button'
 import Input from '../../Forms/Input/Input'
 import Erro from '../../Helper/Erro'
+import Head from '../../Helper/Head'
 
 const LoginPasswordReset = () => {
 
@@ -40,6 +41,7 @@ const LoginPasswordReset = () => {
 
   return (
     <div>
+      <Head title='Resete a sua senha'/>
       <h1 className='title'>Resete a senha</h1>
       <form onSubmit={handleSubmit}>
         <Input label='Nova Senha' type='password' name='password' {...password}/>
