@@ -5,6 +5,7 @@ import { PHOTOS_GET } from '../../../api/Api'
 import Erro from '../../Helper/Erro'
 import Loading from '../../Helper/Loading'
 import style from './FeedPhotos.module.css'
+import { Log } from 'victory'
 
 const FeedPhotos = ({page, user, setInfinity, setModalPhoto}) => {
 
@@ -25,18 +26,17 @@ const FeedPhotos = ({page, user, setInfinity, setModalPhoto}) => {
 
   if(error) return <Erro erro={error}/>
   if(loading) return <Loading/>
-  if(data){
-    return (
-      <ul className={`${style.feed} animeLeft`}>
-        {data.map(photo => 
-          <FeedPhotoItem 
-            key={photo.id}
-            photo={photo}
-            setModalPhoto={setModalPhoto}/>
+  if(data) return (  
+    <ul className={`${style.feed} animeLeft`}>
+      {data.map(photo => 
+        <FeedPhotoItem 
+        key={photo.id}
+        photo={photo}
+        setModalPhoto={setModalPhoto}/>
         )}
-      </ul>
-    )
-  }else return null
+    </ul>
+  )
+  else return null
 }
 
 export default FeedPhotos

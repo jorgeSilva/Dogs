@@ -40,17 +40,23 @@ const Feed = ({user}) => {
         { modalPhoto && 
           <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto}/>
         }
-        {pages.map((item) => (
-          <FeedPhotos 
-          key={item} 
-          user={user} 
-          page={item} 
-          setModalPhoto={setModalPhoto}
-          setInfinity={setInfinity}
-          />))
+        {
+          pages.map((item) => (
+            <FeedPhotos 
+              key={item} 
+              user={user} 
+              page={item} 
+              setModalPhoto={setModalPhoto}
+              setInfinity={setInfinity}
+          />)) 
         } 
       </div>
-      
+
+      {infinity && !user && (
+        <p style={{textAlign: 'center', padding: '2rem 0 4rem 0',color: '#888',}}>
+          Não existe mais postagens 
+        </p>
+      )}
     </div>
   )
 }
